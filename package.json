@@ -1,0 +1,48 @@
+{
+  "name": "available-in-katex",
+  "version": "1.0.0",
+  "description": "A preview for symbols and functions available in KaTeX.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --color",
+    "dev": "webpack-dev-server --color --inline --hot --port 7890",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "utensil",
+    "email": "utensilcandel@gmail.com",
+    "url": "http://github.com/utensil"
+  },
+  "dependencies": {
+    "babel": "^4.7.1",
+    "babel-core": "^4.7.1",
+    "babel-loader": "^4.1.0",
+    "css-loader": "^0.15.1",
+    "dsv-loader": "^1.0.0",
+    "file-loader": "^0.8.4",
+    "jade": "^1.9.2",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "lodash": "^3.4.0",
+    "moment": "^2.9.0",
+    "node-libs-browser": "^0.5.2",
+    "raw-loader": "^0.5.1",
+    "riot": "^2.0.12",
+    "riotcontrol": "0.0.1",
+    "riotjs-loader": "^1.1.3",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utensil-site/available-in-katex.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utensil-site/available-in-katex/issues"
+  },
+  "homepage": "https://github.com/utensil-site/available-in-katex"
+}
