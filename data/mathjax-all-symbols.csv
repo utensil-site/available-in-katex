@@ -1,57 +1,58 @@
 symbol,sample
-#,
-%,
-&,
+#,\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
+%,%this is a single-line comment
+&,\begin{matrix} a & b\cr c & d \end{matrix}
 ^,x^i
 _,x_i
 {,\{
 },\}
 ~,Dr.~Carol~J.V.~Fisher
 ',
-\ ,
-\!,
+"\,","|\,|"
+\!,|\!|
 \$,
 \&,
-\:,
+\:,|\:|
 \>,
 \_,
 \|,
-\above,
-\acute,
+\above,a+1 \above 1pt b
+\acute,\acute e
 \alpha,
 \And,
 \approx,
 \arccos,
 \arctan,
-\array,
+\array,\array{ a & b+1 \cr c+1 & d }
 \arrowvert,
 \asymp,
-\atopwithdelims,
+\atopwithdelims,a \atopwithdelims [ ] b
 \backepsilon,
 \backprime,
 \backsim,
 \backsimeq,
 \backslash,
-\bar,
-\Bbb,
+\bar,\bar{xy}
+\Bbb,\Bbb{AaBb123}
 \bbox,
-\bcancel,
+\bcancel,\frac{\bcancel{\frac13}}{\bcancel{\frac13}} = 1
 \because,
-\begin,
+\begin,\begin{align} (a+b)^2 &= (a+b)(a+b)          \tag{3.1c}      \\ &= a^2 + ab + ba + b^2 \tag{$\dagger$} \\ &= a^2 + 2ab + b^2     \tag{$\ast$}&= a^2 + 2ab + b^2     \tag{$\ast$}
+\end,
 \beta,
 \between,
-\bf,
-\big,
+\bf,\bf ab
+\big,\big[\big]
 \bigcirc,
-\Bigg,
-\Biggl,
-\Biggm,
-\Biggr,
-\Bigl,
-\Bigm,
+\Bigg,\Bigg[\Bigg]
+\Biggl,\Biggl[
+\Biggm,x\Biggm| y
+\Biggr,\Biggr]
+\Bigl,\Bigl[
+\Bigm,x\Bigm| y
 \bigodot,
 \bigotimes,
-\bigr,
+\bigr,\bigr]
 \bigstar,
 \bigtriangledown,
 \biguplus,
@@ -62,30 +63,30 @@ _,x_i
 \blacktriangledown,
 \blacktriangleleft,
 \blacktriangleright,
-\bmod,
+\bmod, a \bmod b
 \bot,
 \Box,
 \boxdot,
-\boxed,
+\boxed,\boxed{ab}
 \boxminus,
 \boxplus,
 \boxtimes,
-\brace,
-\brack,
-\buildrel,
+\brace,a+b+c\brace d+e+f
+\brack,a+b+c\brack d+e+f
+\buildrel,\buildrel \alpha\beta \over \longrightarrow
 \Bumpeq,
 \bumpeq,
-\cal,
-\cancelto,
+\cal,\cal AaBb123
+\cancelto,\cancelto{0}{x}
 \cap,
-\cases,
+\cases,|x| = \cases{ x  & \text{if } x\ge 0\cr -x & \text{if } x\lt 0 }
 \cdotp,
-\ce,
-\cee,
-\centerdot,
-\cf,
-\cfrac,
-\check,
+\ce,\ce{O2}
+\cee, \cee{ ^{14}_7N + n -> ^{11}_5B  + ^4_2H }
+\centerdot,a\centerdot b
+\cf,\cf{if\ false\ then\ 0\ else\ succ\ 0 : Nat}
+\cfrac,\cfrac{2}{1+\cfrac{2}{1+\cfrac{2}{1}}}
+\check,\check{oe}
 \chi,
 \circ,
 \circlearrowleft,
@@ -95,16 +96,17 @@ _,x_i
 \circleddash,
 \circledR,
 \circledS,
-\class,
+\class,ab\class{smHighlightRed}{cdef}gh
 \clubsuit,
-\color,
-\colorbox,
+\color,\color{#0000FF}{AaBb123}
+\colorbox,\colorbox{red}{Black text on red background}
 \complement,
 \cong,
 \cos,
 \cot,
-\cr,
-\cssId,
+\cr,\begin{matrix} a & b\cr c & d \end{matrix}
+\tag{3.1c}
+\cssId,\cssId{testID}{testContent}
 \cup,
 \curlyeqprec,
 \curlyeqsucc,
@@ -117,14 +119,14 @@ _,x_i
 \dashrightarrow,
 \dashv,
 \ddagger,
-\dddot,
-\ddot,
-\DeclareMathOperator,
-\definecolor,
-\def,
+\dddot,\dddot x
+\ddot,\ddot x
+\DeclareMathOperator,\DeclareMathOperator {\myOp}{myOp} \cr \myOp(x)
+\definecolor,\definecolor{americanrose}{rgb}{1.0, 0.01, 0.24}
+\def,\def\specialFrac#1#2{\frac{x + #1}{y + #2}} \cr \specialFrac{7}{z+3}
 \deg,
 \delta,
-\dfrac,
+\dfrac,\dfrac{a-1}{b-1}
 \diagdown,
 \diagup,
 \diamond,
@@ -132,13 +134,13 @@ _,x_i
 \dim,
 \displaystyle,
 \divideontimes,
-\dot,
+\dot,\dot x
 \Doteq,
 \doteqdot,
 \dotplus,
-\dots,
-\dotsc,
-\dotsm,
+\dots,x_1 + \dots + x_n
+\dotsc,"x,\dotsc,y"
+\dotsm, (x+1)\dotsm(y-1)
 \doublebarwedge,
 \doublecap,
 \doublecup,
@@ -147,12 +149,12 @@ _,x_i
 \downharpoonleft,
 \downharpoonright,
 \ell,
-\enclose,
-\end,
-\enspace,
-\eqalign,
+\enclose,\enclose{bottom,circle,top}{x}
+\end,\begin{matrix} a & b\cr c & d \end{matrix}
+\enspace,|\enspace|
+\eqalign,\eqalign{ 3x - 4y &= 5\cr x  +  7 &= -2y }
 \eqcirc,
-\eqref,
+\eqref,\eqref{eqn:myeqn}
 \eqsim,
 \eqslantgtr,
 \eqslantless,
@@ -160,11 +162,11 @@ _,x_i
 \eth,
 \exists,
 \fallingdotseq,
-\fbox,
+\fbox,\fbox{Hi there!}
 \Finv,
 \flat,
-\frac,
-\frak,
+\frac,\frac a b
+\frak,\frak{AaBb123}
 \Game,
 \Gamma,
 \gcd,
@@ -180,46 +182,46 @@ _,x_i
 \gneq,
 \gneqq,
 \gnsim,
-\grave,
-\gt,
+\grave,\grave{eu}
+\gt, a \gt b
 \gtrdot,
 \gtreqless,
 \gtreqqless,
 \gtrless,
 \gtrsim,
 \gvertneqq,
-\hat,
-\hbox,
+\hat,\hat{ab}
+\hbox,\hbox{for all $x > 0$}
 \heartsuit,
 \hom,
 \hookrightarrow,
-\href,
-\hskip,
-\hspace,
-\huge,
-\iff,
+\href,\href{http://www.onemathematicalcat.org}{Math}
+\hskip,w\hskip1em i\hskip2em d\hskip3em e\hskip4em r
+\hspace,s\hspace7ex k\hspace6ex i\hspace5ex n\hspace4ex n\hspace3ex i\hspace2ex e\hspace1ex r
+\huge,{\huge AaBb123}
+\iff,A\iff B
 \iiint,
 \Im,
-\impliedby,
-\implies,
+\impliedby,P\impliedby Q
+\implies,P\implies Q
 \in,
 \infty,
 \int,
 \intop,
-\it,
+\it,{\it AaBb123}
 \jmath,
 \kappa,
-\kern,
-\label,
+\kern,I\kern-2.5pt R
+\label,\begin{equation} f(x) = ax^2 + bx + c \label{eqn:myeqn} \end{equation}
 \Lambda,
 \land,
-\LARGE,
-\large,
+\LARGE,{\LARGE AaBb123}
+\large,{\large AaBb123}
 \lbrace,
 \lceil,
 \ldots,
 \leadsto,
-\left,
+\left,\left\lbrace \frac ab, c \right\rbrace
 \leftarrow,
 \leftharpoondown,
 \leftleftarrows,
@@ -227,7 +229,7 @@ _,x_i
 \leftrightarrows,
 \leftrightharpoons,
 \leftrightsquigarrow,
-\leftroot,
+\leftroot,\sqrt[3\leftroot1]{x}
 \leq,
 \leqq,
 \leqslant,
@@ -237,11 +239,11 @@ _,x_i
 \lesseqqgtr,
 \lessgtr,
 \lesssim,
-\let,
+\let,\def\bar{hello} \cr \let\fooi\bar
 \lfloor,
 \lgroup,
 \lim,
-\limits,
+\limits,"\int\limits_a^b f(x)\,dx"
 \ll,
 \llcorner,
 \Lleftarrow,
@@ -262,44 +264,44 @@ _,x_i
 \lozenge,
 \lrcorner,
 \Lsh,
-\lt,
+\lt, a + \lt b\gt + c
 \ltimes,
 \lVert,
 \lvert,
 \lvertneqq,
 \maltese,
 \mapsto,
-\mathbf,
-\mathcal,
-\mathclose,
-\mathinner,
-\mathop,
-\mathord,
-\mathrel,
-\mathrm,
-\mathsf,
+\mathbf,\mathbf{AaBb123}
+\mathcal, \mathcal{AaBb123}
+\mathclose,a + \mathopen\lt b\mathclose\gt + c
+\mathinner,ab\mathinner{\text{inside}}cd
+\mathop,\mathop{\star}_a^b
+\mathord,1\mathord{,}234{,}567
+\mathrel,a \mathrel{\#} b
+\mathrm,\mathrm{AaBb123}
+\mathsf,\mathsf{AaBb123}
 \mathtip,
-\mathtt,
+\mathtt,\mathtt{AaBb123}
 \max,
 \measuredangle,
 \mho,
 \mid,
 \min,
-\mkern,
-\mod,
-\moveleft,
+\mkern,a\mkern18pt b
+\mod, 3\equiv 5 \mod 2
+\moveleft,t\moveleft3pt ight
 \mp,
-\mspace,
+\mspace,a\mspace18pt b
 \multimap,
 \nabla,
 \ncong,
 \ne,
 \neg,
-\negthickspace,
-\negthinspace,
-\newcommand,
-\newenvironment,
-\Newextarrow,
+\negthickspace,a\negthickspace b
+\negthinspace,a\negthinspace b
+\newcommand,\newcommand\myHearts  {\color{purple}{\heartsuit}\kern-2.5pt\color{green}{\heartsuit}}
+\newenvironment, \newenvironment{myHeartEnv} {\color{purple}{\heartsuit}\kern-2.5pt\color{green}{\heartsuit}} {\text{ forever}}
+\Newextarrow,\Newextarrow{\xRightarrow}{5,5}{0x21D2} \cr \xRightarrow[\text{text below}]{}
 \newline,
 \ngeq,
 \ngeqq,
@@ -314,9 +316,9 @@ _,x_i
 \nleqslant,
 \nless,
 \nmid,
-\nobreakspace,
-\nolimits,
-\not,
+\nobreakspace,a\nobreakspace b
+\nolimits,\sum\nolimits_{k=1}^n a_k
+\not,\not\gt
 \notin,
 \nprec,
 \npreceq,
@@ -341,23 +343,23 @@ _,x_i
 \nvdash,
 \nwarrow,
 \odot,
-\oldstyle,
+\oldstyle,\oldstyle AaBb123
 \omega,
 \ominus,
 \oplus,
 \otimes,
-\overbrace,
-\overleftrightarrow,
-\overrightarrow,
-\overwithdelims,
+\overbrace,\overbrace{x + \cdots + x}^{n\rm\ times}_{\text{(note here)}
+\overleftrightarrow,\overleftrightarrow{AB}
+\overrightarrow,\overrightarrow{AB}
+\overwithdelims,a \overwithdelims [ ] b
 \parallel,
 \perp,
 \Phi,
 \Pi,
 \pitchfork,
 \pm,
-\pmb,
-\pod,
+\pmb,\pmb{a+b-c}
+\pod,x=y\pod{\text{display mode}}
 \prec,
 \preccurlyeq,
 \preceq,
@@ -365,16 +367,16 @@ _,x_i
 \precnsim,
 \precsim,
 \prime,
-\projlim,
+\projlim,\projlim^sup_sub
 \propto,
 \psi,
 \qquad,
-\raise,
+\raise,h\raise 2pt {ighe} r
 \rbrace,
 \rceil,
-\ref,
-\renewcommand,
-\renewenvironment,
+\ref,\ref{eqn:myeqn}
+\renewcommand,\newcommand\myHearts  {\color{purple}{\heartsuit}\kern-2.5pt\color{green}{\heartsuit}}
+\renewenvironment, \newenvironment{myHeartEnv} {\color{purple}{\heartsuit}\kern-2.5pt\color{green}{\heartsuit}} {\text{ forever}}
 \require,
 \restriction,
 \rfloor,
@@ -389,45 +391,45 @@ _,x_i
 \rightsquigarrow,
 \rightthreetimes,
 \risingdotseq,
-\rlap,
+\rlap,a \rlap{\;/}{=} b
 \rmoustache,
 \Rrightarrow,
 \Rsh,
 \rtimes,
-\Rule,
+\Rule,a\Rule{5px}{4ex}{2ex}^b_c d
 \rVert,
 \rvert,
 \S,
-\scriptscriptstyle,
-\scriptstyle,
+\scriptscriptstyle,\frac ab + {\scriptscriptstyle \frac cd + \frac ef} + \frac gh
+\scriptstyle,\frac ab + {\scriptstyle \frac cd + \frac ef} + \frac gh
 \sec,
-\sf,
+\sf,\sf AaBb123
 \shortmid,
 \shortparallel,
-\shoveleft,
-\shoveright,
-\sideset,
+\shoveleft, \shoveleft % todo
+\shoveright, \shoveright % todo
+\sideset,\sideset{_1^2}{_3^4}\sum
 \Sigma,
 \sim,
 \sin,
-\skew,
+\skew,\skew4\hat{\hat A}
 \smallfrown,
 \smallint,
 \smallsmile,
-\smash,
-\Space,
+\smash,\sqrt{\smash{7}\vphantom{\frac ab}}
+\Space,a\Space{5px}{4ex}{2ex}^b_c d
 \spadesuit,
 \sqcap,
-\sqrt,
+\sqrt,\sqrt[3]{x}
 \sqsubseteq,
 \sqsupseteq,
-\stackrel,
-\strut,
+\stackrel,\stackrel{\mathrm top}{\mathrm bottom}
+\strut,\underrightarrow{AB\strut}
 \subset,
 \subseteq,
 \subsetneq,
 \subsetneqq,
-\substack,
+\substack,\sum_{ \substack{ 1\lt i\lt 3 \\ 1\le j\lt 5 }} a_{ij}
 \succ,
 \succcurlyeq,
 \succeq,
@@ -440,34 +442,34 @@ _,x_i
 \supsetneq,
 \supsetneqq,
 \surd,
-\tag,
+\tag,\tag{3.1c}
 \tan,
 \tau,
 \TeX,
-\textbf,
-\textrm,
-\texttip,
-\tfrac,
+\textbf,\textbf AaBb123
+\textrm,\textrm AaBb123
+\texttip,\texttip AaBb123
+\tfrac,\tfrac ab
 \therefore,
 \Theta,
 \thickapprox,
 \thicksim,
-\thinspace,
+\thinspace,a\thinspace b\thinspace c\thinspace d
 \times,
-\Tiny,
+\Tiny,{\Tiny AaBb123}
 \to,
 \top,
 \triangledown,
 \triangleleft,
 \triangleq,
 \triangleright,
-\tt,
+\tt,{\tt AaBb123}
 \twoheadrightarrow,
 \ulcorner,
-\underbrace,
-\underleftrightarrow,
-\underrightarrow,
-\unicode,
+\underbrace,\underbrace{x + \cdots + x}_{n\rm\ times}^{\text{(note here)}
+\underleftrightarrow,\underline{\text{a long argument}}
+\underrightarrow,\underrightarrow{AB}
+\unicode,\unicode{x263a}
 \unlhd,
 \unrhd,
 \Uparrow,
@@ -504,23 +506,23 @@ _,x_i
 \vartriangleright,
 \varUpsilon,
 \varXi,
-\vcenter,
+\vcenter,\left(\vcenter{\frac{a+b}{\dfrac{c}{d}}}\right)
 \Vdash,
 \vDash,
 \vdots,
 \vee,
-\verb,
+\verb,\verb!Text and $\frac ab$ in \verb mode!
 \Vert,
-\vphantom,
+\vphantom,\binom{\frac ab}c \binom{\vphantom{\frac ab}?}c
 \wedge,
-\widetilde,
+\widetilde,\widetilde{AB}
 \wr,
 \Xi,
-\xcancel,
-\xleftarrow,
-\xlongequal,
-\xmapsto,
-\xrightarrow,
+\xcancel,x+\xcancel{5y}=0
+\xleftarrow,\xleftarrow{\text{see equation (1)}}
+\xlongequal,\xlongequal{\text{a long text...}}
+\xmapsto,\xmapsto{\text{Look here}}
+\xrightarrow,\xrightarrow{ab}
 \xtofrom,
 \xtwoheadleftarrow,
 \xtwoheadrightarrow,
