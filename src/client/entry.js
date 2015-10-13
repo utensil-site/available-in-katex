@@ -12,6 +12,12 @@ $(document).ready(function () {
   var $table = $('<table class="table table-bordered" id="symbol-table"></table>');
   var $tbody = $('<tbody></tbody>');
 
+  var total = {
+    ok: 0,
+    error: 0,
+    sample: 0
+  };
+
   _.forEach(mathjax_all_symbols, function (row) {
     var symbol = row.symbol;
     var $tr = $('<tr></tr>');
@@ -20,21 +26,36 @@ $(document).ready(function () {
     $tr.append($(TD).text(symbol)).append($(TD).text(symbol));
     $tbody.append($tr);
 
-    var target_dom = $('td', $tr).get(1);
-    var $target_dom = $(target_dom);
+    var katex_symbol_dom = $('td', $tr).get(0);
+    var katex_render_dom = $('td', $tr).get(1);
+    var $katex_render_dom = $(katex_render_dom);
 
     try {
-      katex.render(symbol, target_dom, { displayMode: true });
-      $target_dom.addClass('success');
-    } catch(e) {
-      $target_dom.addClass('danger');
-      if(!e instanceof katex.ParseError) {
-        $target_dom.text(e.toString());
+      if (!_.isEmpty(row.sample)) {
+        katex.render(row.sample, katex_render_dom, { displayMode: true });
+        $katex_render_dom.addClass('info');
+        $katex_render_dom.attr('title', row.sample);
+        total.sample += 1;
+      } else {
+        katex.render(symbol, katex_render_dom, { displayMode: true });
+        $katex_render_dom.addClass('success');
+        total.ok += 1;
       }
+    } catch(e) {
+      total.error += 1;
+      $katex_render_dom.addClass('danger').css({
+        'font-size': 'smaller',
+        'color': 'grey'
+      });
+      //if(!e instanceof katex.ParseError) {
+        $katex_render_dom.text(e.toString());
+      //}
     }
   });
 
   $table.append($tbody);
 
-  $('.container').append($table);
+  $('.container').append(
+    $('<div class="alert alert-info" role="alert"></div>').text('' + total.ok + ' symbols successfully rendered by itself, ' +  total.sample + ' symbols successfully rendered by example, ' + total.error + ' symbols failed to render.')
+  ).append($table);
 });
