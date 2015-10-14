@@ -1,4 +1,4 @@
-symbol,sample
+symbol,example
 #,\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
 %,%this is a single-line comment
 &,\begin{matrix} a & b\cr c & d \end{matrix}

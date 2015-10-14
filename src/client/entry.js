@@ -15,7 +15,7 @@ $(document).ready(function () {
   var total = {
     ok: 0,
     error: 0,
-    sample: 0
+    example: 0
   };
 
   _.forEach(mathjax_all_symbols, function (row) {
@@ -31,11 +31,15 @@ $(document).ready(function () {
     var $katex_render_dom = $(katex_render_dom);
 
     try {
-      if (!_.isEmpty(row.sample)) {
-        katex.render(row.sample, katex_render_dom, { displayMode: true });
+      if (!_.isEmpty(row.example)) {
+        katex.render(row.example, katex_render_dom, { displayMode: true });
         $katex_render_dom.addClass('info');
-        $katex_render_dom.attr('title', row.sample);
-        total.sample += 1;
+        //data-toggle="tooltip" data-placement="left"
+        $katex_render_dom.tooltip({
+          placement: 'right',
+          title: row.example
+        });
+        total.example += 1;
       } else {
         katex.render(symbol, katex_render_dom, { displayMode: true });
         $katex_render_dom.addClass('success');
@@ -56,6 +60,10 @@ $(document).ready(function () {
   $table.append($tbody);
 
   $('.container').append(
-    $('<div class="alert alert-info" role="alert"></div>').text('' + total.ok + ' symbols successfully rendered by itself, ' +  total.sample + ' symbols successfully rendered by example, ' + total.error + ' symbols failed to render.')
+    $('<div class="alert alert-success symbol-stat" role="alert"></div>').text('' + total.ok + ' symbols successfully rendered by itself.')
+  ).append(
+    $('<div class="alert alert-info symbol-stat" role="alert"></div>').html('' + total.example + ' functions successfully rendered by providing an example(mostly from Dr. Carol JVF Burns\'s <a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm">TEX Commands available in MathJax</a>).')
+  ).append(
+    $('<div class="alert alert-danger symbol-stat" role="alert"></div>').html('' + total.error + ' symbols/functions failed to render. Help KaTeX to add them <a href="https://github.com/Khan/KaTeX/blob/master/CONTRIBUTING.md">here</a>.')
   ).append($table);
 });
