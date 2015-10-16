@@ -5,8 +5,16 @@ require('script!./vendor/jquery.min.js');
 require('script!./vendor/bootstrap-3.3.5/js/bootstrap.min.js');
 
 var mathjax_all_symbols = require('../../data/mathjax-all-symbols.csv');
+var katex_all_functions = require('../../data/katex-wiki-support-functions.csv');
+
+_.remove(katex_all_functions, function (katex_row) {
+  return _.findIndex(mathjax_all_symbols, function (mathjax_row) {
+    return katex_row.symbol == mathjax_row.symbol;
+  }) != -1;
+});
 
 console.log(mathjax_all_symbols);
+console.log(katex_all_functions);
 
 $(document).ready(function () {
   var $table = $('<table class="table table-bordered" id="symbol-table"></table>');
@@ -18,7 +26,7 @@ $(document).ready(function () {
     example: 0
   };
 
-  _.forEach(mathjax_all_symbols, function (row) {
+  _.forEach(mathjax_all_symbols.concat(katex_all_functions), function (row) {
     var symbol = row.symbol;
     var $tr = $('<tr></tr>');
     var TD = '<td></td>';
@@ -64,6 +72,6 @@ $(document).ready(function () {
   ).append(
     $('<div class="alert alert-info symbol-stat" role="alert"></div>').html('' + total.example + ' functions successfully rendered by providing an example(mostly from Dr. Carol JVF Burns\'s <a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm">TEX Commands available in MathJax</a>).')
   ).append(
-    $('<div class="alert alert-danger symbol-stat" role="alert"></div>').html('' + total.error + ' symbols/functions failed to render. Help KaTeX to add them <a href="https://github.com/Khan/KaTeX/blob/master/CONTRIBUTING.md">here</a>.')
+    $('<div class="alert alert-danger symbol-stat" role="alert"></div>').html('' + total.error + ' symbols/functions failed to render. <a href="https://github.com/Khan/KaTeX/blob/master/CONTRIBUTING.md">Help KaTeX to add them.</a>')
   ).append($table);
 });

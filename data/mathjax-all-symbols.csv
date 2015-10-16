@@ -1,7 +1,10 @@
 symbol,example
 #,\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
 %,%this is a single-line comment
-&,\begin{matrix} a & b\cr c & d \end{matrix}
+&,"\begin{matrix}
+    a & b\cr
+    c & d
+    \end{matrix}"
 ^,x^i
 _,x_i
 {,\{
@@ -37,7 +40,11 @@ _,x_i
 \bbox,
 \bcancel,\frac{\bcancel{\frac13}}{\bcancel{\frac13}} = 1
 \because,
-\begin,\begin{align} (a+b)^2 &= (a+b)(a+b)          \tag{3.1c}      \\ &= a^2 + ab + ba + b^2 \tag{$\dagger$} \\ &= a^2 + 2ab + b^2     \tag{$\ast$}&= a^2 + 2ab + b^2     \tag{$\ast$}
+\begin,"\begin{align}
+        (a+b)^2 &= (a+b)(a+b)          \tag{3.1c}      \\
+                &= a^2 + ab + ba + b^2 \tag{$\dagger$} \\
+                &= a^2 + 2ab + b^2     \tag{$\ast$}
+        \end{align}"
 \end,
 \beta,
 \between,
@@ -79,7 +86,9 @@ _,x_i
 \cal,\cal AaBb123
 \cancelto,\cancelto{0}{x}
 \cap,
-\cases,|x| = \cases{ x  & \text{if } x\ge 0\cr -x & \text{if } x\lt 0 }
+\cases,"|x| = \cases{
+          x  & \text{if } x\ge 0\cr
+          -x & \text{if } x\lt 0 }"
 \cdotp,
 \ce,\ce{O2}
 \cee, \cee{ ^{14}_7N + n -> ^{11}_5B  + ^4_2H }
@@ -104,7 +113,10 @@ _,x_i
 \cong,
 \cos,
 \cot,
-\cr,\begin{matrix} a & b\cr c & d \end{matrix}
+\cr,"\begin{matrix}
+    a & b\cr
+    c & d
+    \end{matrix}"
 \tag{3.1c}
 \cssId,\cssId{testID}{testContent}
 \cup,
@@ -152,7 +164,10 @@ _,x_i
 \enclose,\enclose{bottom,circle,top}{x}
 \end,\begin{matrix} a & b\cr c & d \end{matrix}
 \enspace,|\enspace|
-\eqalign,\eqalign{ 3x - 4y &= 5\cr x  +  7 &= -2y }
+\eqalign,"\eqalign{
+  3x - 4y &= 5\cr
+  x  +  7 &= -2y
+}"
 \eqcirc,
 \eqref,\eqref{eqn:myeqn}
 \eqsim,
