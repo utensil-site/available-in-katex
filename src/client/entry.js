@@ -7,6 +7,9 @@ require('script!./vendor/bootstrap-3.3.5/js/bootstrap.min.js');
 var mathjax_all_symbols = require('../../data/mathjax-all-symbols.csv');
 var katex_all_functions = require('../../data/katex-wiki-support-functions.csv');
 
+// TODO
+// 1. respect the example instead of removing it blindly
+// 2. sort the list
 _.remove(katex_all_functions, function (katex_row) {
   return _.findIndex(mathjax_all_symbols, function (mathjax_row) {
     return katex_row.symbol == mathjax_row.symbol;
