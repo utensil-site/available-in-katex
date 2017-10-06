@@ -117,7 +117,7 @@ _,x_i
     a & b\cr
     c & d
     \end{matrix}"
-\tag{3.1c}
+\tag, \tag{3.1c}
 \cssId,\cssId{testID}{testContent}
 \cup,
 \curlyeqprec,
@@ -161,7 +161,7 @@ _,x_i
 \downharpoonleft,
 \downharpoonright,
 \ell,
-\enclose,\enclose{bottom,circle,top}{x}
+\enclose,"\enclose{bottom,circle,top}{x}"
 \end,\begin{matrix} a & b\cr c & d \end{matrix}
 \enspace,|\enspace|
 \eqalign,"\eqalign{
@@ -291,7 +291,7 @@ _,x_i
 \mathclose,a + \mathopen\lt b\mathclose\gt + c
 \mathinner,ab\mathinner{\text{inside}}cd
 \mathop,\mathop{\star}_a^b
-\mathord,1\mathord{,}234{,}567
+\mathord,"1\mathord{,}234{,}567"
 \mathrel,a \mathrel{\#} b
 \mathrm,\mathrm{AaBb123}
 \mathsf,\mathsf{AaBb123}
@@ -363,7 +363,7 @@ _,x_i
 \ominus,
 \oplus,
 \otimes,
-\overbrace,\overbrace{x + \cdots + x}^{n\rm\ times}_{\text{(note here)}
+\overbrace,"\overbrace{x + \cdots + x}^{n\rm\ times}"
 \overleftrightarrow,\overleftrightarrow{AB}
 \overrightarrow,\overrightarrow{AB}
 \overwithdelims,a \overwithdelims [ ] b

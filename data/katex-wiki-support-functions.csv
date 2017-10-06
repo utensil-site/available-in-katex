@@ -106,28 +106,28 @@ c   & ddd
 \bigodot,
 \bigsqcup,
 \smallint,
-\over,
+\over,{a+1 \over b+2}+c
 \frac,
 \dfrac,
 \tfrac,
-\choose,
+\choose,n+1 \choose k+2
 \binom,\binom n k
 \dbinom,\dbinom n k
 \tbinom,\tbinom n k
 \rlap,
-\llap,a\mathrel{{=}\llap{/\,}}b
-\tiny,
-\scriptsize,
-\footnotesize,
-\small,
-\normalsize,
-\large,
-\Large,
-\LARGE,
-\huge,
-\Huge,
+\llap,"a\mathrel{{=}\llap{/\,}}b"
+\tiny,"\tiny tiny"
+\scriptsize,"\scriptsize scriptsize"
+\footnotesize,"\footnotesize footnotesize"
+\small,"\small small"
+\normalsize,"\normalsize normalsize"
+\large,"\large large"
+\Large,"\Large Large"
+\LARGE,"\LARGE LARGE"
+\huge,"\huge huge"
+\Huge,"\Huge Huge"
 \displaystyle,
-\textstyle,
+\textstyle,"\frac ab + {\textstyle \frac cd + \frac ef} + \frac gh"
 \scriptstyle,
 \scriptscriptstyle,
 \limits,
@@ -219,27 +219,27 @@ c   & ddd
 \nrightarrow,
 \nRightarrow,
 \to,
-\mathrm,
+\mathrm,\mathrm{AaBb123}
 \mathit,\mathit{AaBb123}
-\mathbf,
+\mathbf,\mathbf{AaBb123}
 \mathbb,\mathbb{AaBb123}
-\mathcal,
-\mathfrak,\mathbb{AaBb123}
+\mathcal,\mathcal{AaBb123}
+\mathfrak,\mathfrak{AaBb123}
 \mathscr,\mathscr{AaBb123}
-\mathsf,
-\mathtt,
-\Bbb,
+\mathsf,mathsf{AaBb123}
+\mathtt,mathtt{AaBb123}
+\Bbb
 \bold,\bold{AaBb123}
 \frak,
-\!,
-\ ,
-"\,",
-\:,
-\;,
-\enspace,
-\qquad,
-\quad,
-\space,
+\!,"|\!|\!|"
+\ ,"|\ |\ |"
+"\,","|\,|\,|"
+\:,"|\:|\:|"
+\;,"|\;|\;|"
+\enspace,"|\enspace|\enspace|"
+\qquad,"|\qquad|\qquad|"
+\quad,"|\quad|\quad|"
+\space,"|\space|\space|"
 \phantom,\Gamma^{\phantom{i}j}_{i\phantom{j}k}
 \circledast,
 \circledcirc,
