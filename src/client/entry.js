@@ -28,6 +28,18 @@ function show_only(klass) {
 
 $(document).ready(function () {
   var $table = $('<table class="table table-bordered" id="symbol-table"></table>');
+  var $thead = $('<thead></thead>');
+  var TR = '<tr></tr>';
+  var TD = '<td></td>';
+  var TH = '<th></th>';
+
+  $thead.append(
+    $(TR).
+      append($(TH).html('Symbol/Function<br /><small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;</small>')).
+      append($(TH).html('Rendered<br /><small class="text-muted">or the exception if failed</small>')).
+      append($(TH).html('Example<br /><small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;</small>'))
+  );
+
   var $tbody = $('<tbody></tbody>');
 
   var total = {
@@ -38,23 +50,31 @@ $(document).ready(function () {
 
   _.forEach(mathjax_all_symbols.concat(katex_all_functions), function (row) {
     var symbol = row.symbol;
-    var $tr = $('<tr></tr>');
-    var TD = '<td></td>';
+    var $tr = $(TR);
 
-    $tr.append($(TD).text(symbol)).append($(TD).text(symbol));
+    $tr.
+      append($(TD).
+        addClass('symbol').
+        text(symbol)).
+      append($(TD).
+        addClass('rendered').
+        text(symbol)).
+      append($(TD).
+        addClass('example').
+        append(
+            _.isEmpty(row.example) ? 
+            '' : $('<pre></pre>').
+                  append($('<code></code>').text(row.example))));
+
     $tbody.append($tr);
 
-    var katex_symbol_dom = $('td', $tr).get(0);
-    var katex_render_dom = $('td', $tr).get(1);
+    var katex_symbol_dom = $('td.symbol', $tr).get(0);
+    var katex_render_dom = $('td.rendered', $tr).get(0);
+    var katex_example_dom = $('td.example', $tr).get(0);
     var $katex_render_dom = $(katex_render_dom);
 
     try {
       if (!_.isEmpty(row.example)) {
-        //data-toggle="tooltip" data-placement="left"
-        $katex_render_dom.tooltip({
-          placement: 'right',
-          title: row.example
-        });
         katex.render(row.example, katex_render_dom, { displayMode: true });
         $katex_render_dom.addClass('info');
         total.example += 1;
@@ -75,7 +95,7 @@ $(document).ready(function () {
     }
   });
 
-  $table.append($tbody);
+  $table.append($thead).append($tbody);
 
   $('.container').append(
     $('<div class="alert alert-success symbol-stat" role="alert"></div>').text('' + total.ok + ' symbols successfully rendered by itself.').click(function () {
