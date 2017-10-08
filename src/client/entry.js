@@ -7,17 +7,39 @@ require('script!./vendor/bootstrap-3.3.5/js/bootstrap.min.js');
 var mathjax_all_symbols = require('../../data/mathjax-all-symbols.csv');
 var katex_all_functions = require('../../data/katex-wiki-support-functions.csv');
 
-// TODO
-// 1. respect the example instead of removing it blindly
-// 2. sort the list
+var mathjax_all_symbols_to_remove = {};
+var katex_all_functions_to_remove = {};
+
 _.remove(katex_all_functions, function (katex_row) {
   return _.findIndex(mathjax_all_symbols, function (mathjax_row) {
-    return katex_row.symbol == mathjax_row.symbol;
+    var diff = {
+      mathjax_row: mathjax_row,
+      katex_row: katex_row
+    };
+    if(katex_row.symbol == mathjax_row.symbol) {
+      if(_.isEmpty(katex_row.example)) {
+        if (!_.isEmpty(mathjax_row.example)) {
+          katex_all_functions_to_remove[katex_row.symbol] = diff;
+        }
+        return true;
+      } else {
+        mathjax_all_symbols_to_remove[mathjax_row.symbol] = diff;
+        return false;
+      }
+    } else {
+      return false;
+    }
   }) != -1;
+});
+
+_.remove(mathjax_all_symbols, function (mathjax_row) {
+  return mathjax_all_symbols_to_remove[mathjax_row.symbol] != null;
 });
 
 console.log(mathjax_all_symbols);
 console.log(katex_all_functions);
+console.log(mathjax_all_symbols_to_remove);
+console.log(katex_all_functions_to_remove);
 
 var CLASSES = ['info', 'success', 'danger'];
 

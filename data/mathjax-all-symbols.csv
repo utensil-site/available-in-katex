@@ -471,7 +471,7 @@ _,x_i
 \thicksim,
 \thinspace,a\thinspace b\thinspace c\thinspace d
 \times,
-\Tiny,{\Tiny AaBb123}
+\Tiny,\Tiny AaBb123
 \to,
 \top,
 \triangledown,
@@ -481,7 +481,7 @@ _,x_i
 \tt,{\tt AaBb123}
 \twoheadrightarrow,
 \ulcorner,
-\underbrace,\underbrace{x + \cdots + x}_{n\rm\ times}^{\text{(note here)}
+\underbrace,\underbrace{x + \cdots + x}_{n\rm\ times}
 \underleftrightarrow,\underline{\text{a long argument}}
 \underrightarrow,\underrightarrow{AB}
 \unicode,\unicode{x263a}
