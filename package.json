@@ -34,7 +34,8 @@
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
     "webpack": "^1.10.1",
-    "webpack-dev-server": "^1.10.1"
+    "webpack-dev-server": "^1.10.1",
+    "github-api": "^3.0.0"
   },
   "repository": {
     "type": "git",
