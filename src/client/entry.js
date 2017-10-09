@@ -103,12 +103,16 @@ console.log(katex_all_functions_to_remove);
 
 var CLASSES = ['info', 'success', 'danger'];
 
-function show_only(klass) {
+function toggle_only(klass) {
   _.forEach(CLASSES, function (k) {
-    $('#symbol-table .' + k).parent('tr').hide();
-  });
+    var tr = $('#symbol-table .' + k).parent('tr');
 
-  $('#symbol-table .' + klass).parent('tr').show();
+    if (k == klass) {
+      tr.show();
+    } else {
+      tr.toggle();
+    }
+  });
 }
 
 function on_render() {
@@ -189,15 +193,15 @@ function on_render() {
   $('.container').empty();
   $('.container').append(
     $('<div class="alert alert-success symbol-stat" role="alert"></div>').text('' + total.ok + ' symbols successfully rendered by itself.').click(function () {
-      show_only('success');
+      toggle_only('success');
     })
   ).append(
     $('<div class="alert alert-info symbol-stat" role="alert"></div>').html('' + total.example + ' functions successfully rendered by providing an example(mostly from Dr. Carol JVF Burns\'s <a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm">TEX Commands available in MathJax</a>).').click(function () {
-      show_only('info');
+      toggle_only('info');
     })
   ).append(
     $('<div class="alert alert-danger symbol-stat" role="alert"></div>').html('' + total.error + ' symbols/functions failed to render. <a href="https://github.com/Khan/KaTeX/blob/master/CONTRIBUTING.md">Help KaTeX to add them.</a>').click(function () {
-      show_only('danger');
+      toggle_only('danger');
     })
   ).append($table);
 
