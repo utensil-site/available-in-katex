@@ -2,9 +2,9 @@ symbol,example
 #,\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
 %,%this is a single-line comment
 &,"\begin{matrix}
-    a & b\cr
-    c & d
-    \end{matrix}"
+a & b\cr
+c & d
+\end{matrix}"
 ^,x^i
 _,x_i
 {,\{
@@ -150,9 +150,37 @@ _,x_i
 \Doteq,
 \doteqdot,
 \dotplus,
-\dots,x_1 + \dots + x_n
-\dotsc,"x,\dotsc,y"
-\dotsm, (x+1)\dotsm(y-1)
+\dots,"\begin{array}{c}
+x_1, \dots, x_n \cr
+x_1 + \dots + x_n
+\end{array}"
+\cdots,
+\ldots,
+\dotsb,"\begin{array}{c}
+\text{dots with binary operations and relations:} \cr\cr
+x_1 + x_2 +\dotsb + x_n \cr
+x_1 + x_2 +\dotsb + x_n
+\end{array}"
+\dotsc,"\begin{array}{c}
+\text{dots with commas:} \cr\cr
+x_1,x_2,\dotsc,x_n \cr
+x_1,x_2,\dots,x_n
+\end{array}"
+\dotsi,"\begin{array}{c}
+\text{dots with integrals:} \cr\cr
+\int_{A_1}\int_{A_2}\dotsi\int_{A_n} \cr
+\int_{A_1}\int_{A_2}\dots\int_{A_n}
+\end{array}"
+\dotsm,"\begin{array}{c}
+\text{dots with multiplication:} \cr\cr
+x_1x_2\dotsm x_n \cr
+x_1x_2\dots x_n
+\end{array}"
+\dotso,"\begin{array}{c}
+\text{other dots:} \cr\cr
+A_1\dotso A_n \cr
+A_1\dots A_n
+\end{array}"
 \doublebarwedge,
 \doublecap,
 \doublecup,
@@ -234,7 +262,6 @@ _,x_i
 \large,{\large AaBb123}
 \lbrace,
 \lceil,
-\ldots,
 \leadsto,
 \left,\left\lbrace \frac ab, c \right\rbrace
 \leftarrow,
@@ -431,7 +458,7 @@ _,x_i
 \smallfrown,
 \smallint,
 \smallsmile,
-\smash,\sqrt{\smash{7}\vphantom{\frac ab}}
+\smash,\sqrt{\frac ab} \sqrt{\smash{7}\vphantom{\frac ab}}
 \Space,a\Space{5px}{4ex}{2ex}^b_c d
 \spadesuit,
 \sqcap,
