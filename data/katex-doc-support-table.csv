@@ -1,0 +1,1126 @@
+symbol,example,note
+!,n!
+\!,a\!b
+#,\def\bar#1{#1^2} \bar{y}
+\#,
+%,%this is a comment
+\%,
+&,"\begin{matrix}
+   a & b \\
+   c & d
+\end{matrix}"
+\&,
+',
+\',\text{\'{a}}
+(,
+),
+\(…\),\text{\(\frac a b\)}
+\,a\ b
+\",\text{\"{a}}
+\$,
+"\,","a\,\,{b}"
+\.,\text{\.{a}}
+\:,a\:\:{b}
+\;,a\;\;{b}
+_,x_i
+\_,
+\`,\text{\\'{a}}
+&#060;,
+\=,\text{\\={a}}
+>,
+[,
+],
+{,{a}
+},{a}
+\{,
+\},
+&#124;,
+\&#124;,
+~,\text{no~no~no~breaks}
+\~,\text{\\~{a}}
+\\,"\begin{matrix}
+   a & b \\
+   c & d
+\end{matrix}"
+^,x^i
+\^,\text{\\^{a}}
+\AA,\text{\AA}
+\aa,\text{\aa}
+\above,,"In master"
+\abovewithdelims,
+\acute,\acute e
+\AE,\text{\AE}
+\ae,\text{\ae}
+\alef,,"see \aleph"
+\aleph,
+{align},,"see {aligned}"
+{aligned},"\begin{aligned}
+   a&=b+c \\
+   d+e&=f
+\end{aligned}"
+{alignat},,"see {alignedat}"
+{alignedat},"\begin{alignedat}{2}
+   10&x+ &3&y = 2 \\
+    3&x+&13&y = 4
+\end{alignedat}"
+\allowbreak,
+\Alpha,
+\alpha,
+\amalg,
+\And,
+\and,
+\ang,
+\angl,
+\angle,
+\approx,
+\approxeq,
+\arccos,
+\arcctg,
+\arcsin,
+\arctan,
+\arctg,
+\arg,
+{array},"\begin{array}{cc}
+   a & b \\
+   c & d
+\end{array}"
+\array,,"see {array}"
+\arraystretch,"\def\arraystretch{1.5}
+\begin{array}{cc}
+   a & b \\
+   c & d
+\end{array}"
+\Arrowvert,
+\arrowvert,
+\ast,
+\asymp,
+\atop,a \atop b
+\atopwithdelims,
+\backepsilon,
+\backprime,
+\backsim,
+\backsimeq,
+\backslash,
+\bar,\bar{y}
+\barwedge,
+\Bbb,"\Bbb{ABC}
+KaTeX supports A-Z & k"
+\Bbbk,
+\bbox,
+\bcancel,\bcancel{5}
+\because,
+\begin,"\begin{matrix}
+   a & b \\
+   c & d
+\end{matrix}"
+\begingroup,\begingroup a}
+\Beta,
+\beta,
+\beth,
+\between,
+\bf,\bf AaBb12
+\big,\big(\big)
+\Big,\Big(\Big)
+\bigcap,
+\bigcirc,
+\bigcup,
+\bigg,\bigg(\bigg)
+\Bigg,\Bigg(\Bigg)
+\biggl,\biggl(
+\Biggl,\Biggl(
+\biggm,\biggm\vert
+\Biggm,\Biggm\vert
+\biggr,\biggr)
+\Biggr,\Biggr)
+\bigl,\bigl(
+\Bigl,\Bigl(
+\bigm,\bigm\vert
+\Bigm,\Bigm\vert
+\bigodot,
+\bigominus,,"<a href='https://github.com/Khan/KaTeX/issues/1222' target='_blank'>Issue #1222</a>"
+\bigoplus,
+\bigoslash,,"<a href='https://github.com/Khan/KaTeX/issues/1222' target='_blank'>Issue #1222</a>"
+\bigotimes,
+\bigr,\bigr)
+\Bigr,\Bigr)
+\bigsqcap,,"<a href='https://github.com/Khan/KaTeX/issues/1222' target='_blank'>Issue #1222</a>"
+\bigsqcup,
+\bigstar,
+\bigtriangledown,
+\bigtriangleup,
+\biguplus,
+\bigvee,
+\bigwedge,
+\binom,\binom n k
+\blacklozenge,
+\blacksquare,
+\blacktriangle,
+\blacktriangledown,
+\blacktriangleleft,
+\blacktriangleright,
+\bm,\bm{AaBb}
+{Bmatrix},"\begin{Bmatrix}
+   a & b \\
+   c & d
+\end{Bmatrix}"
+{bmatrix},"\begin{bmatrix}
+   a & b \\
+   c & d
+\end{bmatrix}"
+\bmod,a \bmod b
+\bold,\bold{AaBb123}
+\boldsymbol,\boldsymbol{AaBb}
+\bot,
+\bowtie,
+\Box,
+\boxdot,
+\boxed,\boxed{ab}
+\boxminus,
+\boxplus,
+\boxtimes,
+\brace,,"In master"
+\bracevert,
+\brack,,"In master"
+\breve,\breve{eu}
+\buildrel,
+\bull,,"See \bullet"
+\bullet,
+\Bumpeq,
+\bumpeq,
+\C,,"See \Bbb{C}"
+\cal,,"See \mathcal"
+\cancel,\cancel{5}
+\cancelto,
+\Cap,
+\cap,
+{cases},"\begin{cases}
+   a &\text{if } b  \\
+   c &\text{if } d
+\end{cases}"
+\cases,,"see {cases}"
+{CD},
+\cdot,
+\cdotp,
+\cdots,
+\ce,,"A PR is pending"
+\cee,,"Deprecated by mhchem"
+\centerdot,a\centerdot b
+\cf,,"Deprecated by mhchem"
+\cfrac,\cfrac{2}{1+\cfrac{2}{1+\cfrac{2}{1}}}
+\check,\check{oe}
+\ch,
+\checkmark,
+\Chi,
+\chi,
+\choose,{n+1 \choose k+2}
+\circ,
+\circeq,
+\circlearrowleft,
+\circlearrowright,
+\circledast,
+\circledcirc,
+\circleddash,
+\circledR,
+\circledS,
+\class,,"A PR is pending."
+\cline,,"<a href='https://github.com/Khan/KaTeX/issues/269' target='_blank'>Issue #269</a>"
+\clubs,
+\clubsuit,
+\cnums,
+\colon,
+\Colonapprox,
+\colonapprox,
+\Coloneq,
+\coloneq,
+\Coloneqq,
+\coloneqq,
+\Colonsim,
+\colonsim,
+\color,\color{#0000FF} AaBb123
+\colorbox,\colorbox{red}{Black on red}
+\complement,
+\Complex,
+\cong,
+\Coppa,
+\coppa,
+\coprod,
+\copyright,
+\cos,
+\cosec,
+\cosh,
+\cot,
+\cotg,
+\coth,
+\cr,"\begin{matrix}
+   a & b \cr
+   c & d
+\end{matrix}"
+\csc,
+\cssId,,"A PR is pending."
+\ctg,
+\cth,
+\Cup,
+\cup,
+\curlyeqprec,
+\curlyeqsucc,
+\curlyvee,
+\curlywedge,
+\curvearrowleft,
+\curvearrowright,
+\dag,
+\Dagger,
+\dagger,
+\daleth,
+\Darr,,"See \Downarrow"
+\dArr,
+\darr,,"See \downarrow"
+{darray},"\begin{darray}{cc}
+   a & b \\
+   c & d
+\end{darray}"
+\dashleftarrow,
+\dashrightarrow,
+\dashv,
+\dbinom,\dbinom n k
+\dblcolon,
+{dcases},"\begin{dcases}
+   a &\text{if } b  \\
+   c &\text{if } d
+\end{dcases}"
+\ddag,
+\ddagger,
+\ddddot,
+\dddot,
+\ddot,\ddot x
+\ddots,
+\DeclareMathOperator,
+\def,\def\foo{x^2} \foo + \foo
+\definecolor,,"<a href='https://github.com/Khan/KaTeX/issues/750' target='_blank'>Issue #750</a>"
+\deg,
+\degree,
+\delta,
+\Delta,
+\det,
+\Digamma,
+\digamma,
+\dfrac,\dfrac{a-1}{b-1}
+\diagdown,
+\diagup,
+\Diamond,
+\diamond,
+\diamonds,
+\diamondsuit,
+\dim,
+\displaylines,
+\displaystyle,\displaystyle\sum_0^n
+\div,
+\divideontimes,
+\dot,\dot x
+\Doteq,
+\doteq,
+\doteqdot,
+\dotplus,
+\dots,x_1 + \dots + x_n
+\dotsb,x_1 +\dotsb + x_n
+\dotsc,"x,\dotsc,y"
+\dotsi,\int_{A_1}\int_{A_2}\dotsi
+\dotsm,$x_1 x_2 \dotsm x_n
+\dotso,
+\doublebarwedge,
+\doublecap,
+\doublecup,
+\Downarrow,
+\downarrow,
+\downdownarrows,
+\downharpoonleft,
+\downharpoonright,
+\ell,
+\else,,"<a href='https://github.com/Khan/KaTeX/issues/1003' target='_blank'>Issue #1003</a>"
+\empty,
+\emptyset,
+\enclose,,"Non standard"
+\end,"\begin{matrix}
+   a & b \\
+   c & d
+\end{matrix}"
+\endgroup,{a\endgroup
+\enspace,a\enspace b
+\Epsilon,
+\epsilon,
+\eqalign,
+\eqalignno,
+\eqcirc,
+\Eqcolon,
+\eqcolon,
+{equation},,"<a href='https://github.com/Khan/KaTeX/issues/445' target='_blank'>Issue #445</a>"
+{eqnarray},
+\Eqqcolon,
+\eqqcolon,
+\eqref,,"<a href='https://github.com/Khan/KaTeX/issues/350' target='_blank'>Issue #350</a>"
+\eqsim,
+\eqslantgtr,
+\eqslantless,
+\equiv,
+\Eta,
+\eta,
+\eth,
+\euro,
+\exist,,"See \exists"
+\exists,
+\exp,
+\fallingdotseq,
+\fbox,\fbox{Hi there!}
+\fcolorbox,\fcolorbox{red}{aqua}{A}
+\fi,,"<a href='https://github.com/Khan/KaTeX/issues/1003' target='_blank'>Issue #1003</a>"
+\Finv,
+\flat,
+\footnotesize,\footnotesize footnotesize
+\forall,
+\frac,\frac a b
+\frak,\frak{AaBb}
+\frown,
+\Game,
+\Gamma,
+\gamma,
+{gather},,"see {gathered}"
+{gathered},"\begin{gathered}
+   a=b \\ 
+   e=b+c
+\end{gathered}"
+\gcd,
+\gdef,\gdef\bar#1{#1^2} \bar{y} + \bar{y}
+\ge,
+\geneuro,
+\geneuronarrow,
+\geneurowide,
+\genfrac,,"In master"
+\geq,
+\geqq,
+\geqslant,
+\gets,
+\gg,
+\ggg,
+\gggtr,
+\gimel,
+\global,\global\def\add#1#2{#1+#2} \add 2 3
+\gnapprox,
+\gneq,
+\gneqq,
+\gnsim,
+\grave,\grave{eu}
+\gt,a \gt b
+\gtrdot,
+\gtrapprox,
+\gtreqless,
+\gtreqqless,
+\gtrless,
+\gtrsim,
+\gvertneqq,
+\H,\text{\H{a}}
+\Harr,
+\hArr,
+\harr,
+\hat,\hat{\theta}
+\hbar,
+\hbox,
+\hdashline,"\begin{matrix}
+   a & b \\
+   \hdashline
+   c & d
+\end{matrix}"
+\hearts,
+\heartsuit,
+\hfil,
+\hfill,,"Issues <a href='https://github.com/Khan/KaTeX/issues/164' target='_blank'>#164</a> & <a href='https://github.com/Khan/KaTeX/issues/269' target='_blank'>#269</a>"
+\hline,"\begin{matrix}
+   a & b \\ \hline
+   c & d
+\end{matrix}"
+\hom,
+\hookleftarrow,
+\hookrightarrow,
+\hphantom,a\hphantom{bc}d
+\href,\href{https://khan.github.io/KaTeX/}{KaTeX}
+\hskip,w\hskip1em i\hskip2em d
+\hslash,
+\hspace,s\hspace7ex k
+\huge,\huge huge
+\Huge,\Huge Huge
+\i,\text{\i}
+\idotsint,
+\iddots,,"<a href='https://github.com/Khan/KaTeX/issues/1223' target='_blank'>Issue #1223</a>"
+\if,,"<a href='https://github.com/Khan/KaTeX/issues/1003' target='_blank'>Issue #1003</a>"
+\iff,A\iff B
+\ifmode,,"<a href='https://github.com/Khan/KaTeX/issues/1003' target='_blank'>Issue #1003</a>"
+\ifx,,"<a href='https://github.com/Khan/KaTeX/issues/1003' target='_blank'>Issue #1003</a>"
+\iiiint,
+\iiint,
+\iint,
+\Im,
+\image,
+\imath,
+\impliedby,P\impliedby Q
+\implies,P\implies Q
+\in,
+\includegraphics,,"<a href='https://github.com/Khan/KaTeX/issues/898' target='_blank'>Issue #898</a>"
+\inf,
+\infin,
+\infty,
+\injlim,
+\int,
+\intercal,
+\intop,
+\Iota,
+\iota,
+\isin,
+\it,{\it AaBb}
+\j,\text{\j}
+\jmath,
+\Join,
+\Kappa,
+\kappa,
+\KaTeX,
+\ker,
+\kern,I\kern-2.5pt R
+\Koppa,
+\koppa,
+\label,
+\lang,,"See \langle"
+\L,
+\l,
+\Lambda,
+\lambda,
+\land,
+\langle,
+\Larr,
+\lArr,
+\larr,
+\large,\large large
+\Large,\Large Large
+\LARGE,\LARGE LARGE
+\LaTeX,
+\lbrace,
+\lbrack,
+\lceil,
+\ldotp,
+\ldots,
+\le,
+\leadsto,
+\left,\left\lbrace \dfrac ab \right.
+\leftarrow,
+\Leftarrow,
+\LeftArrow,,"Non standard"
+\leftarrowtail,
+\leftharpoondown,
+\leftharpoonup,
+\leftleftarrows,
+\Leftrightarrow,
+\leftrightarrow,
+\leftrightarrows,
+\leftrightharpoons,
+\leftrightsquigarrow,
+\leftroot,
+\leftthreetimes,
+\leq,
+\leqalignno,
+\leqq,
+\leqslant,
+\lessapprox,
+\lessdot,
+\lesseqgtr,
+\lesseqqgtr,
+\lessgtr,
+\lesssim,
+\let,,"<a href='https://github.com/Khan/KaTeX/issues/1413' target='_blank'>Issue #1413</a>"
+\lfloor,
+\lg,
+\lgroup,
+\lhd,
+\lim,
+\liminf,
+\limits,\lim\limits_x
+\limsup,
+\ll,
+\llap,"{=}\llap{/\,}"
+\llcorner,
+\Lleftarrow,
+\lll,
+\llless,
+\lmoustache,
+\ln,
+\lnapprox,
+\lneq,
+\lneqq,
+\lnot,
+\lnsim,
+\log,
+\Longleftarrow,
+\longleftarrow,
+\Longleftrightarrow,
+\longleftrightarrow,
+\longmapsto,
+\Longrightarrow,
+\longrightarrow,
+\looparrowleft,
+\looparrowright,
+\lor,
+\lower,
+\lozenge,
+\Lrarr,
+\lrArr,
+\lrarr,
+\lrcorner,
+\lq,
+\Lsh,
+\lt,
+\ltimes,
+\lVert,
+\lvert,
+\lvertneqq,
+\maltese,
+\mapsto,
+\mathbb,"\mathbb{AB}
+KaTeX supports A-Z k"
+\mathbf,\mathbf{AaBb123}
+\mathbin,a\mathbin{!}b
+\mathcal,\mathcal{AaBb123}
+\mathchoice,"a\mathchoice{\,}{\,\,}{\,\,\,}{\,\,\,\,}b"
+\mathclap,\sum_{\mathclap{1\le i\le n}} x_{i}
+\mathclose,a + (b\mathclose\gt + c
+\mathellipsis,
+\mathfrak,"\mathfrak{AaBb}
+KaTeX supports A-Za-z"
+\mathinner,ab\mathinner{\text{inside}}cd
+\mathit,"\mathit{AaBb}
+KaTeX supports A-Za-z"
+\mathllap,"{=}\mathllap{/\,}"
+\mathop,\mathop{\star}_a^b
+\mathopen,a + \mathopen\lt b) + c
+\mathord,"1\mathord{,}234{,}567"
+\mathpunct,A\mathpunct{-}B
+\mathrel,a \mathrel{\#} b
+\mathrlap,"\mathrlap{\,/}{=}"
+\mathring,\mathring{a}
+\mathrm,\mathrm{AaBb123}
+\mathscr,"\mathscr{AaBb123}
+KaTeX supports A-Z"
+\mathsf,\mathsf{AaBb123}
+\mathsterling,
+\mathstrut,
+\mathtip,
+\mathtt,\mathtt{AaBb123}
+\matrix,,"See {matrix}"
+{matrix},"\begin{matrix}
+   a & b \\
+   c & d
+\end{matrix}"
+\max,
+\mbox,
+\measuredangle,
+\medspace,a\medspace b
+\mho,
+\mid,
+\middle,P\left(A\middle\vert B\right)
+\min,
+\mit,,"See \mathit"
+\mkern,a\mkern18mu b
+\mmlToken,
+\mod,3\equiv 5 \mod 2
+\models,
+\moveleft,
+\moveright,
+\mp,
+\mskip,a\mskip{10mu}b
+\mspace,
+\Mu,
+\mu,
+\multicolumn,,"<a href='https://github.com/Khan/KaTeX/issues/269' target='_blank'>Issue #269</a>"
+{multiline},
+\multimap,
+\N,,"See \Bbb{N}"
+\nabla,
+\natnums,
+\natural,
+\negmedspace,a\negmedspace b
+\ncong,
+\ne,
+\nearrow,
+\neg,
+\negthickspace,a\negthickspace b
+\negthinspace,a\negthinspace b
+\neq,
+\newcommand,\newcommand\chk{\checkmark} \chk
+\newenvironment,,"<a href='https://github.com/Khan/KaTeX/issues/37' target='_blank'>Issue #37</a>"
+\Newextarrow,
+\newline,a\newline b
+\nexists,
+\ngeq,
+\ngeqq,
+\ngeqslant,
+\ngtr,
+\ni,
+\nleftarrow,
+\nLeftarrow,
+\nLeftrightarrow,
+\nleftrightarrow,
+\nleq,
+\nleqq,
+\nleqslant,
+\nless,
+\nmid,
+\nobreak,
+\nobreakspace,a\nobreakspace b
+\nolimits,\lim\nolimits_x
+\normalsize,\normalsize normalsize
+\not,\not =
+\notag,
+\notin,
+\notni,
+\nparallel,
+\nprec,
+\npreceq,
+\nRightarrow,
+\nrightarrow,
+\nshortmid,
+\nshortparallel,
+\nsim,
+\nsubseteq,
+\nsubseteqq,
+\nsucc,
+\nsucceq,
+\nsupseteq,
+\nsupseteqq,
+\ntriangleleft,
+\ntrianglelefteq,
+\ntriangleright,
+\ntrianglerighteq,
+\Nu,
+\nu,
+\nVDash,
+\nVdash,
+\nvDash,
+\nvdash,
+\nwarrow,
+\O,\text{\O}
+\o,\text{\o}
+\odot,
+\OE,\text{\OE}
+\oe,\text{\oe}
+\officialeuro,
+\oiiint,,"In master"
+\oiint,,"In master"
+\oint,
+\oldstyle,
+\omega,
+\Omega,
+\Omicron,
+\omicron,
+\ominus,
+\operatorname,\operatorname{asin} x
+\operatorname*,,"<a href='https://github.com/Khan/KaTeX/issues/1242' target='_blank'>Issue #1242</a>"
+\oplus,
+\or,
+\oslash,
+\otimes,
+\over,{a+1 \over b+2}+c
+\overbrace,\overbrace{x+⋯+x}^{n\text{ times}}
+\overbracket,
+\overgroup,\overgroup{AB}
+\overleftarrow,\overleftarrow{AB}
+\overleftharpoon,\overleftharpoon{AB}
+\overleftrightarrow,\overleftrightarrow{AB}
+\overline,\overline{\text{a long argument}}
+\overlinesegment,\overlinesegment{AB}
+\overparen,,"See \overgroup"
+\Overrightarrow,\Overrightarrow{AB}
+\overrightarrow,\overrightarrow{AB}
+\overrightharpoon,\overrightharpoon{ac}
+\overset,\overset{!}{=}
+\overwithdelims,
+\owns,
+\P,\text{\P}
+\pagecolor,
+\parallel,
+\part,
+\partial,
+\perp,
+\phantom,\Gamma^{\phantom{i}j}_{i\phantom{j}k}
+\phase,
+\Phi,
+\phi,
+\Pi,
+\pi,
+{picture},
+\pitchfork,
+\plusmn,
+\pm,
+\pmatrix,,"See {pmatrix}"
+{pmatrix},"\begin{pmatrix}
+   a & b \\
+   c & d
+\end{pmatrix}"
+\pmb,,"In master"
+\pmod,x\pmod a
+\pod,x \pod a
+\pounds,
+\Pr,
+\prec,
+\precapprox,
+\preccurlyeq,
+\preceq,
+\precnapprox,
+\precneqq,
+\precnsim,
+\precsim,
+\prime,
+\prod,
+\projlim,
+\propto,
+\providecommand,\providecommand\greet{\text{Hello}} \greet
+\psi,
+\Psi,
+\pu,,"A PR is pending"
+\Q,,"See \Bbb{Q}"
+\qquad,a\qquad\qquad{b}
+\quad,a\quad\quad{b}
+\R,,"See \Bbb{R}"
+\r,\text{\r{a}}
+\raise,,"see \raisebox"
+\raisebox,h\raisebox{2pt}{ighe}r
+\rang,,"see \rangle"
+\rangle,
+\Rarr,
+\rArr,
+\rarr,
+\rbrace,
+\rbrack,
+\rceil,
+\Re,
+\real,
+\Reals,
+\reals,
+\ref,,"<a href='https://github.com/Khan/KaTeX/issues/350' target='_blank'>Issue #350</a>"
+\relax,
+\renewcommand,"\def\hail{Hi!}
+\renewcommand\hail{\text{Ahoy!}} \hail"
+\renewenvironment,
+\require,
+\restriction,
+\rfloor,
+\rgroup,
+\rhd,
+\Rho,
+\rho,
+\right,\left.\dfrac a b\right)
+\Rightarrow,
+\rightarrow,
+\rightarrowtail,
+\rightharpoondown,
+\rightharpoonup,
+\rightleftarrows,
+\rightleftharpoons,
+\rightrightarrows,
+\rightsquigarrow,
+\rightthreetimes,
+\risingdotseq,
+\rlap,"\rlap{\,/}{=}"
+\rm,\rm AaBb12
+\rmoustache,
+\root,
+\rotatebox,,"<a href='https://github.com/Khan/KaTeX/issues/681' target='_blank'>Issue #681</a>"
+\rq,
+\Rrightarrow,
+\Rsh,
+\rtimes,
+\Rule,,"see \rule"
+\rule,x\rule[6pt]{2ex}{1ex}x
+\rVert,
+\rvert,
+\S,\text{\S}
+\Sampi,
+\sampi,
+\scalebox,
+\scr,,"See \mathscr"
+\scriptscriptstyle,\scriptscriptstyle \frac cd
+\scriptsize,\scriptsize scriptsize
+\scriptstyle,\frac ab + {\scriptstyle \frac cd}
+\sdot,
+\searrow,
+\sec,
+\sect,
+\setlength,,"<a href='https://github.com/Khan/KaTeX/issues/687' target='_blank'>Issue #687</a>"
+\setminus,
+\sf,\sf AaBb123
+\sharp,
+\shortmid,
+\shortparallel,
+\shoveleft,
+\shoveright,
+\sideset,
+\Sigma,
+\sigma,
+\sim,
+\simeq,
+\sin,
+\sinh,
+\sixptsize,\sixptsize sixptsize
+\sh,
+\skew,
+\skip,
+\small,\small small
+\smallfrown,
+\smallint,
+{smallmatrix},
+\smallsetminus,
+\smallsmile,
+\smash,\left(x^{\smash{2}}\right)
+\smile,
+\smiley,
+\sout,\sout{abc}
+\Space,,"see \space"
+\space,a\space{b}
+\spades,
+\spadesuit,
+\sphericalangle,
+{split},,"<a href='https://github.com/Khan/KaTeX/issues/1345' target='_blank'>Issue #1345</a>"
+\sqcap,
+\sqcup,
+\square,
+\sqrt,\sqrt[3]{x}
+\sqsubset,
+\sqsubseteq,
+\sqsupset,
+\sqsupseteq,
+\ss,\text{\ss}
+\stackrel,\stackrel{!}{=}
+\star,
+\Stigma,
+\stigma,
+\strut,
+\style,,"Non standard"
+\SUB,
+{subarray},
+\sube,
+\Subset,
+\subset,
+\subseteq,
+\subseteqq,
+\subsetneq,
+\subsetneqq,
+\substack,
+\succ,
+\succapprox,
+\succcurlyeq,
+\succeq,
+\succnapprox,
+\succneqq,
+\succnsim,
+\succsim,
+\sum,
+\sup,
+\supe,
+\Supset,
+\supset,
+\supseteq,
+\supseteqq,
+\supsetneq,
+\supsetneqq,
+\surd,
+\swarrow,
+\tag,\tag{3.1c} a^2+b^2=c^2
+\tag*,\tag*{3.1c} a^2+b^2=c^2
+\tan,
+\tanh,
+\Tau,
+\tau,
+\tbinom,\tbinom n k
+\TeX,
+\text,\text{ yes }\&\text{ no }
+\textasciitilde,\text{\textasciitilde}
+\textbar,\text{\textbar}
+\textbardbl,\text{\textbardbl}
+\textbf,\textbf{AaBb123}
+\textbraceleft,\text{\textbraceleft}
+\textbraceright,\text{\textbraceright}
+\textcircled,\text{\textcircled a}
+\textcolor,\textcolor{blue}{F=ma}
+\textdagger,\text{\textdagger}
+\textdaggerdbl,\text{\textdaggerdbl}
+\textdegree,\text{\textdegree}
+\textdollar,\text{\textdollar}
+\textellipsis,\text{\textellipsis}
+\textemdash,\text{\textemdash}
+\textendash,\text{\textendash}
+\textgreater,\text{\textgreater}
+\textit,\textit{AaBb}
+\textless,\text{\textless}
+\textnormal,\textnormal{AB}
+\textquotedblleft,\text{\textquotedblleft}
+\textquotedblright,\text{\textquotedblright}
+\textquoteleft,\text{\textquoteleft}
+\textquoteright,\text{\textquoteright}
+\textregistered,\text{\textregistered}
+\textrm,\textrm{AaBb123}
+\textsc,,"<a href='https://github.com/Khan/KaTeX/issues/471' target='_blank'>Issue #471</a>"
+\textsf,\textsf{AaBb123}
+\textsterling,\text{\textsterling}
+\textstyle,\textstyle\sum_0^n
+\texttip,
+\texttt,\texttt{AaBb123}
+\textunderscore,\text{\textunderscore}
+\textvisiblespace,
+\tfrac,\tfrac ab
+\tg,
+\th,
+\therefore,
+\Theta,
+\theta,
+\thetasym,
+\thickapprox,
+\thicksim,
+\thickspace,a\thickspace b
+\thinspace,a\thinspace b
+\tilde,\tilde M
+\times,
+\Tiny,,"see \tiny"
+\tiny,\tiny tiny
+\to,
+\toggle,
+\top,
+\triangle,
+\triangledown,
+\triangleleft,
+\trianglelefteq,
+\triangleq,
+\triangleright,
+\trianglerighteq,
+\tt,{\tt AaBb123}
+\twoheadleftarrow,
+\twoheadrightarrow,
+\u,\text{\u{a}}
+\Uarr,
+\uArr,
+\uarr,
+\ulcorner,
+\underbrace,\underbrace{x+⋯+x}_{n\text{ times}}
+\underbracket,
+\undergroup,\undergroup{AB}
+\underleftarrow,\underleftarrow{AB}
+\underleftrightarrow,\underleftrightarrow{AB}
+\underrightarrow,\underrightarrow{AB}
+\underline,\underline{\text{a long argument}}
+\underlinesegment,\underlinesegment{AB}
+\underparen,,"See \undergroup"
+\underrightarrow,\underrightarrow{AB}
+\underset,\underset{!}{=}
+\unicode,
+\unlhd,
+\unrhd,
+\Uparrow,
+\uparrow,
+\Updownarrow,
+\updownarrow,
+\upharpoonleft,
+\upharpoonright,
+\uplus,
+\uproot,
+\Upsilon,
+\upsilon,
+\upuparrows,
+\urcorner,
+\url,,"In master"
+\utilde,\utilde{AB}
+\v,\text{\v{a}}
+\varcoppa,
+\varDelta,
+\varepsilon,
+\varGamma,
+\varinjlim,
+\varkappa,
+\varLambda,
+\varliminf,
+\varlimsup,
+\varnothing,
+\varOmega,
+\varPhi,
+\varphi,
+\varPi,
+\varpi,
+\varprojlim,
+\varpropto,
+\varPsi,
+\varPsi,
+\varrho,
+\varSigma,
+\varsigma,
+\varstigma,
+\varsubsetneq,
+\varsubsetneqq,
+\varsupsetneq,
+\varsupsetneqq,
+\varTheta,
+\vartheta,
+\vartriangle,
+\vartriangleleft,
+\vartriangleright,
+\varUpsilon,
+\varXi,
+\vcentcolon,
+\vcenter,
+\Vdash,
+\vDash,
+\vdash,
+\vdots,
+\vec,\vec{F}
+\vee,
+\veebar,
+\verb,\verb!\frac a b!
+\Vert,
+\vert,
+\vfil,
+\vfill,
+\vline,,"<a href='https://github.com/Khan/KaTeX/issues/269' target='_blank'>Issue #269</a>"
+{Vmatrix},"\begin{Vmatrix}
+   a & b \\
+   c & d
+\end{Vmatrix}"
+{vmatrix},"\begin{vmatrix}
+   a & b \\
+   c & d
+\end{vmatrix}"
+\vphantom,\overline{\vphantom{M}a}
+\Vvdash,
+\wedge,
+\weierp,,"See \wp"
+\widecheck,\widecheck{AB}
+\widehat,\widehat{AB}
+\wideparen,,"<a href='https://github.com/Khan/KaTeX/issues/560' target='_blank'>Issue #560</a>"
+\widetilde,\widetilde{AB}
+\wp,
+\wr,
+\xcancel,\xcancel{ABC}
+\Xi,
+\xi,
+\xhookleftarrow,\xhookleftarrow{abc}
+\xhookrightarrow,\xhookrightarrow{abc}
+\xLeftarrow,\xLeftarrow{abc}
+\xleftarrow,\xleftarrow{abc}
+\xleftharpoondown,\xleftharpoondown{abc}
+\xleftharpoonup,\xleftharpoonup{abc}
+\xLeftrightarrow,\xLeftrightarrow{abc}
+\xleftrightarrow,\xleftrightarrow{abc}
+\xleftrightharpoons,\xleftrightharpoons{abc}
+\xlongequal,\xlongequal{abc}
+\xmapsto,\xmapsto{abc}
+\xRightarrow,\xRightarrow{abc}
+\xrightarrow,\xrightarrow{abc}
+\xrightharpoondown,\xrightharpoondown{abc}
+\xrightharpoonup,\xrightharpoonup{abc}
+\xrightleftharpoons,\xrightleftharpoons{abc}
+\xtofrom,\xtofrom{abc}
+\xtwoheadleftarrow,\xtwoheadleftarrow{abc}
+\xtwoheadrightarrow,\xtwoheadrightarrow{abc}
+\yen,
+\Z,,"See \Bbb{Z}"
+\Zeta,
+\zeta,
