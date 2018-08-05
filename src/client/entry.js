@@ -4,66 +4,6 @@ require('./assets/less/index.less');
 require('script!./vendor/jquery.min.js');
 require('script!./vendor/bootstrap-3.3.5/js/bootstrap.min.js');
 
-// http://www.javascriptkit.com/javatutors/loadjavascriptcss2.shtml
-function createjscssfile(filename, filetype){
-	if (filetype=="js"){ //if filename is a external JavaScript file
-		var fileref=document.createElement('script')
-		fileref.setAttribute("type","text/javascript")
-		fileref.setAttribute("src", filename)
-	}
-	else if (filetype=="css"){ //if filename is an external CSS file
-		var fileref=document.createElement("link")
-		fileref.setAttribute("rel", "stylesheet")
-		fileref.setAttribute("type", "text/css")
-		fileref.setAttribute("href", filename)
-	}
-	return fileref
-}
-
-function replacejscssfile(oldfilename, newfilename, filetype){
-	var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist using
-	var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
-	var allsuspects=document.getElementsByTagName(targetelement)
-	for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
-		if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(oldfilename)!=-1){
-			var newelement=createjscssfile(newfilename, filetype)
-			allsuspects[i].parentNode.replaceChild(newelement, allsuspects[i])
-		}
-	}
-}
-
-const PKG = 'Khan';
-const REPO = 'KaTeX';
-var old_css = '//khan.github.io/KaTeX/bower_components/katex/dist/katex.min.css';
-var old_js = '//khan.github.io/KaTeX/bower_components/katex/dist/katex.min.js';
-
-import GitHub from 'github-api';
-const gh = new GitHub();
-
-const repo = gh.getRepo(PKG, REPO);
-
-repo.listReleases().then((o) => {
-  console.log(o);
-
-  var tag_name = o.data[0].tag_name;
-  var base_url = `//unpkg.com/katex@${tag_name}`;
-  var latest_css_url = `${base_url}/dist/katex.min.css`;
-  var latest_js_url = `${base_url}/dist/katex.min.js`;
-
-  replacejscssfile(old_css, latest_css_url, 'css');
-  replacejscssfile(old_js, latest_js_url, 'js');
-
-  function checked_render() {
-    console.log('checked_render');
-    katex = (katex || {}).default;
-    if (!on_render()) {
-      setTimeout(checked_render, 200);
-    }
-  } 
-
-  setTimeout(checked_render, 200);
-});
-
 var mathjax_all_symbols = require('../../data/mathjax-all-symbols.csv');
 var katex_all_functions = require('../../data/katex-wiki-support-functions.csv');
 
