@@ -6,6 +6,7 @@ require('script!./vendor/bootstrap-3.3.5/js/bootstrap.min.js');
 
 var mathjax_all_symbols = require('../../data/mathjax-all-symbols.csv');
 var katex_all_functions = require('../../data/katex-wiki-support-functions.csv');
+var katex_doc_support_table = require('../../data/katex-doc-support-table.csv');
 
 var mathjax_all_symbols_to_remove = {};
 var katex_all_functions_to_remove = {};
@@ -41,7 +42,7 @@ console.log(katex_all_functions);
 console.log(mathjax_all_symbols_to_remove);
 console.log(katex_all_functions_to_remove);
 
-var CLASSES = ['info', 'success', 'danger'];
+var CLASSES = ['info', 'success', 'warning', 'danger'];
 
 function toggle_only(klass) {
   _.forEach(CLASSES, function (k) {
@@ -77,11 +78,34 @@ function on_render() {
 
   var total = {
     ok: 0,
+    warning: 0,
     error: 0,
     example: 0
   };
 
-  _.forEach(mathjax_all_symbols.concat(katex_all_functions), function (row) {
+  var all_functions = mathjax_all_symbols.concat(katex_all_functions);
+
+  var notes_map = {};
+
+  all_functions = _.unionBy(all_functions, katex_doc_support_table, 'symbol');
+  
+  katex_doc_support_table.forEach(function (row) {
+    if (!_.isEmpty(row.note)) {
+      notes_map[row.symbol] = row.note;
+    }
+  });
+
+  all_functions.forEach(function (row) {
+    var note = notes_map[row.symbol];
+    if (note) {
+      row.note = note;
+      console.log(row);
+    }
+  });
+
+  // all_functions = katex_doc_support_table;
+
+  _.forEach(all_functions, function (row) {
     var symbol = row.symbol;
     var $tr = $(TR);
 
@@ -117,14 +141,22 @@ function on_render() {
         total.ok += 1;
       }
     } catch(e) {
-      total.error += 1;
-      $katex_render_dom.addClass('danger').css({
-        'font-size': 'smaller',
-        'color': 'grey'
-      });
-      //if(!e instanceof katex.ParseError) {
+      
+
+      if (row.note) {
+        total.warning += 1;
+        $katex_render_dom.addClass('warning').css({
+          'color': 'grey'
+        });
+        $katex_render_dom.html(row.note);
+      } else {
+        total.error += 1;
+        $katex_render_dom.addClass('danger').css({
+          'font-size': 'smaller',
+          'color': 'grey'
+        });
         $katex_render_dom.text(e.toString());
-      //}
+      }
     }
   });
 
@@ -138,6 +170,10 @@ function on_render() {
   ).append(
     $('<div class="alert alert-info symbol-stat" role="alert"></div>').html('' + total.example + ' functions successfully rendered by providing an example(mostly from Dr. Carol JVF Burns\'s <a href="http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm">TEX Commands available in MathJax</a>).').click(function () {
       toggle_only('info');
+    })
+  ).append(
+    $('<div class="alert alert-warning symbol-stat" role="alert"></div>').html('' + total.warning + ' symbols/functions failed to render but has some related work or an explanation. <a href="https://github.com/Khan/KaTeX/blob/master/CONTRIBUTING.md">Help KaTeX to improve them.</a>').click(function () {
+      toggle_only('warning');
     })
   ).append(
     $('<div class="alert alert-danger symbol-stat" role="alert"></div>').html('' + total.error + ' symbols/functions failed to render. <a href="https://github.com/Khan/KaTeX/blob/master/CONTRIBUTING.md">Help KaTeX to add them.</a>').click(function () {

@@ -1,5 +1,5 @@
 symbol,example
-#,\gdef\bar#1{#1^2} \bar{y} + \bar{y}
+#,\def\bar#1{#1^2} \bar{y}
 %,"%this is a single-line comment
 "
 &,"\begin{matrix}
