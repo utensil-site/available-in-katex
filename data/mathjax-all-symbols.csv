@@ -225,7 +225,7 @@ A_1\dots A_n
 \ggg,
 \gggtr,
 \gimel,
-\global,
+\global,"\global\def\macroname#1#2…{definition}"
 \gnapprox,
 \gneq,
 \gneqq,
