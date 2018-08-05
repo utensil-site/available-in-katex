@@ -1,6 +1,7 @@
 symbol,example
-#,\def\specialFrac#1#2{\frac{x + #1}{y + #2}}
-%,%this is a single-line comment
+#,\gdef\bar#1{#1^2} \bar{y} + \bar{y}
+%,"%this is a single-line comment
+"
 &,"\begin{matrix}
 a & b\cr
 c & d
@@ -40,12 +41,16 @@ _,x_i
 \bbox,
 \bcancel,\frac{\bcancel{\frac13}}{\bcancel{\frac13}} = 1
 \because,
-\begin,"\begin{align}
-        (a+b)^2 &= (a+b)(a+b)          \tag{3.1c}      \\
-                &= a^2 + ab + ba + b^2 \tag{$\dagger$} \\
-                &= a^2 + 2ab + b^2     \tag{$\ast$}
-        \end{align}"
-\end,
+\begin,"\begin{aligned}
+(a+b)^2 &= (a+b)(a+b)           \\
+        &= a^2 + ab + ba + b^2  \\
+        &= a^2 + 2ab + b^2  
+\end{aligned}"
+\end,"\begin{aligned}
+(a+b)^2 &= (a+b)(a+b)           \\
+        &= a^2 + ab + ba + b^2  \\
+        &= a^2 + 2ab + b^2  
+\end{aligned}"
 \beta,
 \between,
 \bf,\bf ab
@@ -135,7 +140,7 @@ _,x_i
 \ddot,\ddot x
 \DeclareMathOperator,\DeclareMathOperator {\myOp}{myOp} \cr \myOp(x)
 \definecolor,\definecolor{americanrose}{rgb}{1.0, 0.01, 0.24}
-\def,\def\specialFrac#1#2{\frac{x + #1}{y + #2}} \cr \specialFrac{7}{z+3}
+\def,\def\foo{x^2} \foo + \foo
 \deg,
 \delta,
 \dfrac,\dfrac{a-1}{b-1}
@@ -565,8 +570,8 @@ A_1\dots A_n
 \xlongequal,\xlongequal{\text{a long text...}}
 \xmapsto,\xmapsto{\text{Look here}}
 \xrightarrow,\xrightarrow{ab}
-\xtofrom,
-\xtwoheadleftarrow,
-\xtwoheadrightarrow,
+\xtofrom,"\xtofrom{abc}"
+\xtwoheadleftarrow,"\xtwoheadleftarrow{abc}"
+\xtwoheadrightarrow,"\xtwoheadrightarrow{abc}"
 \yen,
 \zeta,

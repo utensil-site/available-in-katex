@@ -27,6 +27,29 @@ Vmatrix,"\begin{Vmatrix}
 aaa & b\cr
 c   & ddd
 \end{Vmatrix}"
+arraystretch,"\def\arraystretch{1.5}
+  \begin{array}{c:c:c}
+  a & b & c \\ \hline
+  d & e & f \\
+  \hdashline
+  g & h & i
+\end{array}"
+aligned,"\begin{aligned}
+  a&=b+c \\
+  d+e&=f
+\end{aligned}"
+alignedat,"\begin{alignedat}{2}
+  10&x+ &3&y = 2 \\
+  3&x+&13&y = 4
+\end{alignedat}"
+gathered,"\begin{gathered}
+  a=b \\
+  e=b+c
+\end{gathered}"
+cases,"x = \begin{cases}
+  a &\text{if } b \\
+  c &\text{if } d
+\end{cases}"
 \cases,
 \sqrt,
 \text,\text{ Carol }\&\text{ Julia }
@@ -206,7 +229,7 @@ c   & ddd
 \in,
 \gets,
 \leftarrow,
-\LeftArrow,
+\Leftarrow,
 \leftrightarrow,
 \Leftrightarrow,
 \rightarrow,
