@@ -268,7 +268,7 @@ A_1\dots A_n
 \lbrace,
 \lceil,
 \leadsto,
-\left,\left\lbrace \frac ab, c \right\rbrace
+\left,\left(\right.
 \leftarrow,
 \leftharpoondown,
 \leftleftarrows,
@@ -429,6 +429,7 @@ A_1\dots A_n
 \rfloor,
 \rhd,
 \rho,
+\right,\left.\right)
 \Rightarrow,
 \rightarrowtail,
 \rightharpoondown,
@@ -446,7 +447,7 @@ A_1\dots A_n
 \Rule,a\Rule{5px}{4ex}{2ex}^b_c d
 \rVert,
 \rvert,
-\S,
+\S,\text{\S}
 \scriptscriptstyle,\frac ab + {\scriptscriptstyle \frac cd + \frac ef} + \frac gh
 \scriptstyle,\frac ab + {\scriptstyle \frac cd + \frac ef} + \frac gh
 \sec,
