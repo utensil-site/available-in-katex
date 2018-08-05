@@ -162,8 +162,8 @@ function on_render() {
 
   $table.append($thead).append($tbody);
 
-  $('.container').empty();
-  $('.container').append(
+  $('#symbol-table-container').empty();
+  $('#symbol-table-container').append(
     $('<div class="alert alert-success symbol-stat" role="alert"></div>').text('' + total.ok + ' symbols successfully rendered by itself.').click(function () {
       toggle_only('success');
     })

@@ -1,52 +1,52 @@
 symbol,example
-array,"\begin{array}{rr}
+{array},"\begin{array}{rr}
 aaa & b\cr
 c   & ddd
 \end{array}"
-matrix,"\begin{Bmatrix}
+{Bmatrix},"\begin{Bmatrix}
 aaa & b\cr
 c   & ddd
 \end{Bmatrix}"
-bmatrix,"\begin{bmatrix}
+{bmatrix},"\begin{bmatrix}
 aaa & b\cr
 c   & ddd
 \end{bmatrix}"
-Bmatrix,"\begin{Bmatrix}
+{Bmatrix},"\begin{Bmatrix}
 aaa & b\cr
 c   & ddd
 \end{Bmatrix}"
-pmatrix,"\begin{pmatrix}
+{pmatrix},"\begin{pmatrix}
 aaa & b\cr
 c   & ddd
 \end{pmatrix}"
-vmatrix,"\begin{vmatrix}
+{vmatrix},"\begin{vmatrix}
 aaa & b\cr
 c   & ddd
 \end{vmatrix}"
-Vmatrix,"\begin{Vmatrix}
+{Vmatrix},"\begin{Vmatrix}
 aaa & b\cr
 c   & ddd
 \end{Vmatrix}"
-arraystretch,"\def\arraystretch{1.5}
+\arraystretch,"\def\arraystretch{1.5}
   \begin{array}{c:c:c}
   a & b & c \\ \hline
   d & e & f \\
   \hdashline
   g & h & i
 \end{array}"
-aligned,"\begin{aligned}
+{aligned},"\begin{aligned}
   a&=b+c \\
   d+e&=f
 \end{aligned}"
-alignedat,"\begin{alignedat}{2}
+{alignedat},"\begin{alignedat}{2}
   10&x+ &3&y = 2 \\
   3&x+&13&y = 4
 \end{alignedat}"
-gathered,"\begin{gathered}
+{gathered},"\begin{gathered}
   a=b \\
   e=b+c
 \end{gathered}"
-cases,"x = \begin{cases}
+{cases},"x = \begin{cases}
   a &\text{if } b \\
   c &\text{if } d
 \end{cases}"
